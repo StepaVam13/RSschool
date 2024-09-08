@@ -10,20 +10,27 @@
 
 <body>
     <div class="wrapper">
-        <header>
-            <div class="header">
-                <div class="logo">
-                    <p class="logo_title">
+        <header class="header">
+            <div class="header_inner">
+                <a class="logo">  <!-- Практически логотип это ссылка на главную страницу. на главной странице ссылка без атрибута href -->
+                    <span class="logo_title"> <!-- тег p нельзя писать внутри тега а, меняем на фразовый (строчный) тег span -->
                         Cozy House
-                    </p>
-                    <p class="logo_subtitle">
+                    </span>
+                    <span class="logo_subtitle">
                         Shelter for pets in Boston
-                    </p>
-                </div>
-                <div class="burger-menu">
-                    <img src="src/img/Burger.png" alt="">
+                    </span>
+                </a>
+                <div class="burger-menu"> <!-- определись с одним стилием именованием классов и придерживайся его https://ru.bem.info/methodology/naming-convention/ -->
+                    <img src="src/img/Burger.png" alt=""> 
+                    <!-- Не надо так, это не декоративное изображение. несколько путей:
+                    1. вставь как background в css
+                    2. Нарисуй средствами css
+                    3. закодируй внутри css
+                    4. вставь как SVG в HTML
+                    4.1 вставь через svg:use -->
                 </div>
                 <nav>
+                    <!-- Я бы передвинул бургер сюда, т.к. это тоже элемент навигации, но понадобиться обертка поверх списка. вкусовщина -->
                     <ul>
                         <li class="nav-head">About the shelter</li>
                         <li><a class="logo-a" href="#about-content">Our pets</a></li>
@@ -42,24 +49,32 @@
                         <h1>
                             Not only people <br> need a house
                         </h1>
-                        <p class="start-screen-p1">
+                        <p class="start-screen-p1"> <!-- определись, используешь концептуально классы для текстовых блоков внутри контейнера или нет. 
+                            Если да, то используй для всех в том числе для заголовков -->
                             We offer to give a chance to a little and nice puppy with an extremely wide and open heart.
                             He or she will love you more than anybody else in the world, you will see!
                         </p>
-                        <div class="button-start-screen">
-                            <button class="start-screen-btn">
+                        <div class="button-start-screen"> <!-- лишняя обертка -->
+                            <button class="start-screen-btn"> <!-- type="button" указывай по умолчанию если кнопка не отправляет форму -->
                                 Make a friend
                             </button>
                         </div>
                     </div>
                     <div class="img-start-screen">
-                        <img src="src/img/start-screen-puppy.png" alt="">
+                        <img src="src/img/start-screen-puppy.png" alt=""> <!-- изображенияем в Html необходимо задавать минимум 1 фиксированную сторону — width="X". -->
+                        <!-- В идеале здесь:
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="@img-mobile">
+                            <img src="@img"
+                                 width="698"
+                                 alt="">
+                          </picture> -->
                     </div>
 
                 </div>
             </section>
-            <section id="about-content">
-                <div class="about-content">
+            <section id="about-content" class="about-content">
+                <div class="about-content-inner">
                     <div class="img-about-content">
                         <img src="src/img/about-pets.png" alt="">
                     </div>
@@ -83,13 +98,13 @@
                         are looking for a house</h2>
                     <div class="slider-main">
                         <div class="slider-button">
-                            <button class="button-left"></button>
+                            <button class="button-left"><!-- Ниде написал про текст в кнопке. И зачем тебе два slider-button, google it: KISS --></button>
                         </div>
                         <div class="slider">
                             <div class="katrine">
                                 <div class="slider-content">
                                     <img src="src/img/pets-katrine.png" alt="">
-                                    <p>Katrine</p>
+                                    <p>Katrine</p> <!-- Это точно Абзац?) -->
                                     <button>Learn more</button>
                                 </div>
                             </div>
@@ -111,7 +126,7 @@
 
                         </div>
                         <div class="slider-button">
-                            <button class="button-right"></button>
+                            <button class="button-right"><!-- Не должно быть кнопки без текста, CSS я призываю тебя --></button>
                         </div>
                     </div>
                     <div>
@@ -188,15 +203,16 @@
                         For questions <br> and suggestions
                     </h2>
                     <div class="email-phone">
-                        <a href="https://mail.google.com/mail/u/0/#inboxv"><img src="src/img/icon-email.png" alt=""></a>
+                        <a href="https://mail.google.com/mail/u/0/#inboxv"><img src="src/img/icon-email.png" alt=""><!-- TEXT LOST HERE --></a>
                         <p>email@shelter.com</p>
                     </div>
                     <div class="email-phone">
                         <a href="tel:+136745677554" class="a-email-phone">
-                            <img src="src/img/icon-phone.png" alt="">
+                            <!-- +136745677554 -->
+                            <img src="src/img/icon-phone.png" alt=""> <!-- This is icon, no place here for that -->
 
                         </a>
-                        <p>+13 674 567 75 54</p>
+                        <p>+13 674 567 75 54</p> <!-- WTF -->
 
                     </div>
                 </div>
