@@ -13,6 +13,9 @@ header{
 
 .burger-menu{
     display: none;
+    background-image: url('img/Burger.svg');
+    width: 30px;
+    height: 22px;
 }
 
 .wrapper {
@@ -20,11 +23,12 @@ header{
     margin: 0 auto;
 }
 
-.header{
+.header_inner{
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
     height: 60px;
+    align-items: center;
 
 }
 nav>ul{
@@ -34,7 +38,7 @@ nav>ul{
     list-style-type: none;
 }
 
-.logo-a{
+.logo_a{
     font-family: Arial;
     font-size: 15px;
     line-height: 24px;
@@ -42,7 +46,7 @@ nav>ul{
     text-decoration: none;
 }
 
-.logo-a:hover{
+.logo_a:hover{
     color: #FAFAFA;
 }
 
@@ -55,7 +59,7 @@ nav>ul{
 }
 
 
-p.logo_title{
+.logo_title{
     font-family: Georgia;
     font-size: 32px;
     line-height: 35.2px;
@@ -64,7 +68,7 @@ p.logo_title{
 }
 
 
-p.logo_subtitle{
+.logo_subtitle{
     font-family: Arial;
     font-size: 13px;
     line-height: 14.95px;
@@ -74,6 +78,8 @@ p.logo_subtitle{
 
 .logo{
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -93,15 +99,15 @@ h2{
     font-weight: 400;
 }
 
-header, .start-screen{
-    background: url(start-screen-background\ \(1\).png) no-repeat;
+header, section.start-screen{
+    background: url(img/start-screen-background\ \(1\).png) no-repeat;
 }
 
-.start-screen-content{
+.start-screen_content{
     margin: 163px 0px 243px 0px;
 }
 
-div.start-screen{
+.start-screen{
     max-width: 1200px;
     padding: 90px 40px 0 40px;
     display: flex;
@@ -109,14 +115,14 @@ div.start-screen{
 
 }
 
-p.start-screen-p1{
+.start-screen_content>p{
     font-family: Arial;
     font-size: 15px;
     line-height: 24px;
     color: #CDCDCD;
 }
 
-button.start-screen-btn{
+.start-screen_btn{
     width: 207px;
     height: 52px;
     border-radius: 100px;
@@ -128,23 +134,23 @@ button.start-screen-btn{
     line-height: 22.1px;
 }
 
-button.start-screen-btn:hover{
+.start-screen_btn:hover{
     background-color: #FDDCC4;
 }
 
-div.about-content{
+.about-content_inner{
     display: flex;
     margin: 80px 40px 100px 40px;
     padding: 0px 175px 0px 175px;
     gap: 120px;
 }
 
-div.about-content>div>h2{
+.about-content_inner>div>h2{
     margin: 0;
     margin-right: 60px;
 }
 
-div.about-content-text{
+.about-content_text{
     margin: 14px 0px 14px 0px;
     display: flex;
     flex-direction: column;
@@ -152,7 +158,7 @@ div.about-content-text{
     gap: 25px;
 }
 
-div.about-content-text>p{
+.about-content_text>p{
     margin: 0;
     font-family: Arial;
     font-weight: 400;
@@ -165,7 +171,7 @@ div.about-content-text>p{
     background-color: #F6F6F6;
 }
 
-.pets-content{
+.pets_content{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -174,9 +180,10 @@ div.about-content-text>p{
 
 }
 
-.slider-main{
+.slider_main{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .slider{
@@ -198,9 +205,10 @@ div.about-content-text>p{
     border-radius: 100px;
     border: solid 2px #F1CDB3;
     display: flex;
-    background-image: url(Arrow.png);
+    background-image: url(img/Arrow.png);
     background-repeat: no-repeat;
     background-position: center;
+    font-size: 0;
 }
 
 .button-left:hover{
@@ -219,20 +227,21 @@ div.about-content-text>p{
     border-radius: 100px;
     border: solid 2px #F1CDB3;
     display: flex;
-    background-image: url(Arrow\ \(1\).png);
+    background-image: url(img/Arrow\ \(1\).png);
     background-repeat: no-repeat;
     background-position: center;
+    font-size: 0;
 }
 
 .pets{
     padding: 80px 40px 100px 40px;
 }
 
-.pets-content>h2{
+.pets_content>h2{
     margin: 0;
 }
 
-.slider-content{
+.slider_content{
     width: 270px;
     height: 435px;
     background-color: #FAFAFA;
@@ -243,12 +252,12 @@ div.about-content-text>p{
 }
 
 
-.slider-content>button:hover{
+.slider_content>button:hover{
     background-color: #FDDCC4;
     border: none;
 }
 
-.slider-content>p{
+.slider_content>span{
     margin: 0;
     font-family: Georgia;
     font-weight: 400;
@@ -257,7 +266,7 @@ div.about-content-text>p{
     color: #545454;
 }
 
-.slider-content>button{
+.slider_content>button{
     margin: 0px 41.5px 30px 41.5px;
     height: 52px;
     border-radius: 100px;
@@ -273,7 +282,7 @@ div.about-content-text>p{
     border-style: solid;
 }
 
-.pets-btn{
+.pets_btn{
     width: 261px;
     height: 52px;
     border-radius: 100px;
@@ -286,19 +295,22 @@ div.about-content-text>p{
     color: #292929;
 }
 
-.pets-btn:hover{
+.pets_btn:hover{
     background-color: #FDDCC4;
 }
 
-.help-content{
+.help_content{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .help{
     padding: 80px 40px 100px 40px;
 }
 
-.help-content-list1{
+.help_content_list{
     display: flex;
     gap: 120px;
     flex-wrap: wrap;
@@ -307,7 +319,7 @@ div.about-content-text>p{
     max-width: 1150px;
 }
 
-.help-content-list1>div{
+.help_content_list>div{
     font-size: 20px;
     line-height: 23px;
     font-family: Georgia;
@@ -315,11 +327,11 @@ div.about-content-text>p{
     color: #545454;
 }
 
-.help-content>h2{
+.help_content>h2{
     margin: 0px 0px 5px 0px;
 }
 
-.help-content-list1>div>p{
+.help_content_list>div>p{
     margin: 30px 0px 0px 0px;
 }
 
@@ -328,12 +340,12 @@ div.about-content-text>p{
     background-color: #F6F6F6;
 }
 
-.donation-content{
+.donation_content{
     display: flex;
     justify-content: center;
 }
 
-.donation-content>img{
+.donation_content>img{
     margin: 10px 30px 10px 0px;
 }
 
@@ -373,11 +385,11 @@ div.about-content-text>p{
     margin: 0;
 }
 
-.donation-content-text>h2{
+.donation_content_text>h2{
     margin: 0;
 }
 
-.donation-content-text-pr{
+.donation_content_text_description{
     margin: 0;
     font-family: Arial;
     font-size: 12px;
@@ -387,7 +399,7 @@ div.about-content-text>p{
     font-style: italic;
 }
 
-.donation-content-text{
+.donation_content_text{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -395,7 +407,7 @@ div.about-content-text>p{
 
 footer{
     padding: 40px 40px 0px 40px;
-    background: url(footer-background.png) no-repeat;
+    background: url(img/footer-background.png) no-repeat;
 }
 
 .footer{
@@ -409,18 +421,19 @@ footer{
     color: #FFFFFF;
 }
 
-.email-phone{
+.a-email-phone{
     display: flex;
     gap: 20px;
     height: 32p;
+    text-decoration: none;
 }
 
-.email-phone>img{
+.a-email-phone>img{
     width: 40px;
     height: 32px;
 }
 
-.email-phone>p{
+.a-email-phone>span{
     margin: 0;
     display: flex;
     align-items: center;
@@ -429,12 +442,10 @@ footer{
     line-height: 23px;
     font-weight: 400;
     color: #F1CDB3;
+
 }
 
-.a-email-phone{
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .contact{
     display: flex;
@@ -497,7 +508,7 @@ footer{
     color: #FFFFFF;
 }
 
-@media (max-width: 1130px){
+@media (max-width: 1200px){
    body{
     min-width: 768px;
    }
@@ -507,56 +518,56 @@ footer{
    header{
     padding: 30px 30px 0px 30px;
     }
-   .header{
+   .header_inner{
     min-width: 708px;
    }
-   div.start-screen{
+   .start-screen{
     min-width: 768px;
     display: flex;
     flex-direction: column;
     gap: 100px;
     padding: 30px 30px 0px 30px;
    }
-   .start-screen-content{
+   .start-screen_content{
     margin: 0px 114px 0px 114px;
     display: flex;
     flex-direction: column;
     gap: 42px;
    }
 
-   .start-screen-content>h1{
+   .start-screen_content>h1{
     margin: 0;
    }
-   .start-screen-content>p{
+   .start-screen_content>p{
     margin: 0;
    }
    .button-start-screen{
     text-align:center;
    }
 
-   .img-start-screen>img{
+   .start-screen_img>img{
     width: 569px;
     height: 593px;
    }
-   .img-start-screen{
+   .start-screen_img{
     text-align:right;
    }
-   div.about-content{
+   .about-content_inner{
     display: flex;
     flex-direction: column-reverse;
     padding: 0px 139px 0px 139px;
     margin: 80px 30px 100px 30px;
     gap: 80px;
    }
-   div.about-content-text{
+   .about-content_text{
     margin: 0;
    }
 
-   div.about-content>img{
+   .about-content_inner>img{
     width: 300px;
     height: 408px;
    }
-   .img-about-content{
+   .about-content_img{
     text-align:center;
    }
    .woody{
@@ -565,23 +576,23 @@ footer{
    .slider{
     gap: 40px;
    }
-   .help-content-list1{
+   .help_content_list{
     gap: 60px;
     }
-    .help-cont{
+    .help_container{
         width: 170px;
     }
-    .donation-content{
+    .donation_content{
         flex-direction: column-reverse;
         gap: 60px;
         align-items: center;
     }
-    .donation-content>img{
+    .donation_content>img{
         width: 505px;
         margin: 0;
     }
 
-    .donation-content-text{
+    .donation_content_text{
         margin: 0px 63px 0px 63px;
     }
 
@@ -589,12 +600,12 @@ footer{
         flex-wrap: wrap;
         justify-content: space-around
     }
-    header, .start-screen{
-        background: url(start-screen-background1.jpg) no-repeat;
+    header, section.start-screen{
+        background: url(img/start-screen-background1.jpg) no-repeat;
         background-size: cover;
     }
     footer{
-        background: url(footer-background1.png) no-repeat;
+        background: url(img/footer-background1.png) no-repeat;
         background-size: cover;
     }
 
@@ -608,14 +619,14 @@ footer{
         nav{
             display: none;
         }
-        .header{
-            min-width: 320px;
+        .header_inner{
+            min-width: 280px;
 
         }
         header{
             padding: 30px 20px 0px 20px;
         }
-        div.start-screen{
+        .start-screen{
             min-width: 300px;
             display: flex;
             flex-direction: column;
@@ -629,14 +640,16 @@ footer{
             color: #FFFFFF;
             font-weight: 400;
         }
-        .start-screen-p1{
+        .start-screen_content>p{
             text-align: center;
         }
-        div.start-screen-content{
+        .start-screen_content{
             margin: 0;
             align-items: center;
+            max-width: 400px;
+            align-self: center;
         }
-        .img-start-screen>img{
+        .start-screen_img>img{
             width: 260px;
             height: 271.77px;
         }
@@ -644,20 +657,21 @@ footer{
             display: flex;
             align-items: center;
         }
-        div.about-content{
+        .about-content_inner{
             padding: 42px 10px 42px 10px;
             margin: 0;
         }
-        div.about-content-text{
+        .about-content_text{
             align-items: center;
         }
-        div.about-content-text>p{
+        .about-content_text>p{
             text-align: justify;
+            max-width: 500px;
         }
-        div.about-content>div>h2{
+        .about-content_inner>div>h2{
             margin: 0;
         }
-        div.about-content>img{
+        .about-content_inner>img{
             width: 260px;
             height: 353.6px;
         }
@@ -668,40 +682,42 @@ footer{
             order: 1;
             align-items: center;
         }
-        .slider-main{
+        .slider_main{
             flex-wrap: wrap;
             max-width: 320px;
             justify-content: space-around;
         }
-        .pets-content{
+        .slider_main>button{
+            order: 1;
+        }
+        .pets_content{
             align-items: center;
             gap: 42px;
         }
         .pets{
             padding: 42px 10px 42px 10px;
         }
-        .help-cont{
-            width: 165px;
+        .help_container{
+            width: 130px;
         }
         .help{
             padding: 42px 15px 42px 15px;
         }
-        .help-content-list1{
+        .help_content_list{
             gap: 30px;
             justify-content:space-around;
-        }
-        .help-cont1{
-            width: 165px;
+            max-width: 600px;
+
         }
         .donation{
             padding: 42px 10px 42px 10px;
         }
-        .donation-content-text{
+        .donation_content_text{
             margin: 0;
             align-items: center;
             max-width: 320px;
         }
-        .donation-content>img{
+        .donation_content>img{
             width: 260px;
             margin: 0;
         }
@@ -712,7 +728,7 @@ footer{
             font-weight: 400;
             color: #545454;
         }
-        .donation-content-text-pr{
+        .donation_content_text_description{
             text-align: justify;
         }
 
