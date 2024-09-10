@@ -522,7 +522,6 @@ footer{
     min-width: 708px;
    }
    .start-screen{
-    min-width: 768px;
     display: flex;
     flex-direction: column;
     gap: 100px;
