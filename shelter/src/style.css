@@ -11,12 +11,49 @@ header{
     padding: 30px 40px 0px 40px;
 }
 
+
+
 .burger-menu{
-    display: none;
-    background-image: url('img/Burger.svg');
     width: 30px;
     height: 22px;
+    display: flex;
+    z-index: 51;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
 }
+.burger-menu>span{
+    height: 2px;
+    width: 30px;
+    background-color: #F1CDB3;
+    display:block;
+}
+
+
+.open{
+    display: flex !important;
+}
+
+.fix{
+    overflow: hidden !important;
+}
+
+
+
+.burger-menu.active {
+    flex-direction: row;
+    width: 24px;
+}
+
+.burger-menu.active>span {
+    width: 2px;
+    height: 30px;
+}
+
+
+
+
+
 
 .wrapper {
     max-width: 1280px;
@@ -632,6 +669,9 @@ footer{
             gap: 105px;
             padding: 30px 10px 0px 10px;
         }
+        section.start-screen{
+            padding: 0;
+        }
         h1{
             font-family: Georgia;
             font-size: 25px;
@@ -656,6 +696,38 @@ footer{
             display: flex;
             align-items: center;
         }
+        .nav{
+            display: none;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            position:fixed;
+            height: 100%;
+            width: 320px;
+            top: 0;
+            right: 0;
+            z-index: 50;
+            overflow-y: auto;
+            background: rgba(41, 41, 41, 1);
+        }
+
+        .nav>ul{
+            flex-direction: column;
+        }
+
+        .nav>ul>li{
+            font-size: 32px;
+            line-height: 51.2px;
+        }
+
+        .logo_a{
+            font-family: Arial;
+            font-size: 32px;
+            line-height: 51.2px;
+            color: #CDCDCD;
+            text-decoration: none;
+        }
+
         .about-content_inner{
             padding: 42px 10px 42px 10px;
             margin: 0;
@@ -730,6 +802,10 @@ footer{
         .donation_content_text_description{
             text-align: justify;
         }
+        .footer>img{
+            width: 260px;
+        }
+
 
     }
 

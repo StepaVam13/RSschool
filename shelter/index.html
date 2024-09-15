@@ -6,45 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="src/burger-menu.js" async></script>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="header_inner">
-                <a class="logo">  <!-- Практически логотип это ссылка на главную страницу. на главной странице ссылка без атрибута href -->
-                    <span class="logo_title"> <!-- тег p нельзя писать внутри тега а, меняем на фразовый (строчный) тег span -->
+                <a class="logo">
+                    <span class="logo_title">
                         Cozy House
                     </span>
                     <span class="logo_subtitle">
                         Shelter for pets in Boston
                     </span>
                 </a>
-                <div class="burger-menu"> <!-- определись с одним стилием именованием классов и придерживайся его https://ru.bem.info/methodology/naming-convention/ -->
 
-
-                    <!-- Не надо так, это не декоративное изображение. несколько путей:
-                    1. вставь как background в css
-                    2. Нарисуй средствами css
-                    3. закодируй внутри css
-                    4. вставь как SVG в HTML
-                    4.1 вставь через svg:use -->
+                <div class="burger-menu">
+                    <span class="up-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="down-line"></span>
                 </div>
-                <nav>
-                    <!-- Я бы передвинул бургер сюда, т.к. это тоже элемент навигации, но понадобиться обертка поверх списка. вкусовщина -->
-                    <ul>
-                        <li class="nav-head">About the shelter</li>
+
+                <nav class="nav">
+
+                    <ul class="list">
+                        <li class="nav-head" >About the shelter</li>
                         <li>
-                            <a class="logo_a" href="#about-content">Our pets</a>
+                            <a class="logo_a" href="#pets">Our pets</a>
                         </li>
                         <li>
                             <a class="logo_a" href="#help">Help the shelter</a>
                         </li>
                         <li>
-                            <a class="logo_a" href="#donation">Contacts</a>
+                            <a class="logo_a" href="#footer">Contacts</a>
                         </li>
                     </ul>
                 </nav>
+
             </div>
 
         </header>
@@ -56,24 +55,16 @@
                         <h1>
                             Not only people <br> need a house
                         </h1>
-                        <p> <!-- определись, используешь концептуально классы для текстовых блоков внутри контейнера или нет.
-                            Если да, то используй для всех в том числе для заголовков -->
+                        <p>
                             We offer to give a chance to a little and nice puppy with an extremely wide and open heart.
                             He or she will love you more than anybody else in the world, you will see!
                         </p>
-                        <button type="button" class="start-screen_btn"> <!-- type="button" указывай по умолчанию если кнопка не отправляет форму -->
+                        <button type="button" class="start-screen_btn">
                                 Make a friend
                         </button>
                     </div>
                     <div class="start-screen_img">
-                        <img src="src/img/start-screen-puppy.png" width="698px" alt=""> <!-- изображенияем в Html необходимо задавать минимум 1 фиксированную сторону — width="X". -->
-                        <!-- В идеале здесь:
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="@img-mobile">
-                            <img src="@img"
-                                 width="698"
-                                 alt="">
-                          </picture> -->
+                        <img src="src/img/start-screen-puppy.png" width="698px" alt=""> 
                     </div>
 
                 </div>
@@ -198,7 +189,7 @@
             </section>
         </main>
         <footer>
-            <div class="footer">
+            <div class="footer" id="footer">
                 <div class="contact">
                     <h2>
                         For questions <br> and suggestions
@@ -234,6 +225,7 @@
             </div>
         </footer>
     </div>
+
 </body>
 
 </html>
