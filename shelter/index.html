@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css">
+    <script src="src/lodash.js"></script>
     <script src="src/burger-menu.js" async></script>
+    <script src="src/carousel2.js" async></script>
+    <script src="src/popup.js" async></script>
 </head>
 
-<body>
+<body id="body">
     <div class="wrapper">
         <header class="header">
             <div class="header_inner">
@@ -64,7 +67,7 @@
                         </button>
                     </div>
                     <div class="start-screen_img">
-                        <img src="src/img/start-screen-puppy.png" width="698px" alt=""> 
+                        <img src="src/img/start-screen-puppy.png" width="698px" alt="">
                     </div>
 
                 </div>
@@ -93,36 +96,165 @@
                     <h2>Our friends who <br>
                         are looking for a house</h2>
                     <div class="slider_main">
-                        <button class="button-left">Left</button>
-                        <div class="slider">
-                            <div class="katrine">
-                                <div class="slider_content">
-                                    <img src="src/img/pets-katrine.png" width="270px" alt="">
-                                    <span>Katrine</span> <!-- Это точно Абзац?) -->
-                                    <button>Learn more</button>
-                                </div>
-                            </div>
-                            <div class="jennifer">
-                                <div class="slider_content">
-                                    <img src="src/img/pets-jennifer.png" width="270px" alt="">
-                                    <span>Jennifer</span>
-                                    <button>Learn more</button>
-                                </div>
-                            </div>
+                        <button class="button-left" id="btn-left">Left</button>
+                        <div class="slider-wrapper">
+                            <div class="carousel" id="carousel">
+                                <div class="slider" id="item-left">
+                                    <div class="Katrine">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-katrine.png" alt="">
+                                            <span>Katrine</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="Jennifer">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-katrine.png" alt="">
+                                            <span>Jennifer</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="Woody">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-katrine.png" alt="">
+                                            <span>Woody</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
 
-                            <div class="woody">
-                                <div class="slider_content">
-                                    <img src="src/img/pets-woody.png" width="270px" alt="">
-                                    <span>Woody</span>
-                                    <button>Learn more</button>
+                                </div>
+                                <div class="slider" id="item-active">
+                                    <div class="item" id="item1">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-katrine.png" alt="">
+                                            <span>Katrine</span>
+                                            <button class="slider_content_btn" id="4">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item2">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-jennifer.png" alt="">
+                                            <span>Jennifer</span>
+                                            <button class="slider_content_btn" id="0">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item3">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-woody.png" alt="">
+                                            <span>Woody</span>
+                                            <button class="slider_content_btn" id="2">Learn more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider" id="item-right">
+                                    <div class="jennifer">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-jennifer.png" width="270px" alt="">
+                                            <span>Jennifer</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="Sophia">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-jennifer.png" width="270px" alt="">
+                                            <span>Sophia</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="Freddie">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-jennifer.png" width="270px" alt="">
+                                            <span>Freddie</span>
+                                            <button>Learn more</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider" id="item-hidden">
+                                    <div class="item" id="item1">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-katrine.png" alt="">
+                                            <span>Katrine</span>
+                                            <button class="slider_content_btn" id="4">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item2">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-jennifer.png" alt="">
+                                            <span>Jennifer</span>
+                                            <button class="slider_content_btn" id="0">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item3">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-woody.png" alt="">
+                                            <span>Woody</span>
+                                            <button class="slider_content_btn" id="2">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item4">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-sophia.png" alt="">
+                                            <span>Sophia</span>
+                                            <button class="slider_content_btn" id="1">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item5">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-timmy.png" alt="">
+                                            <span>Timmy</span>
+                                            <button class="slider_content_btn" id="5">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item6">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-charly.png" alt="">
+                                            <span>Charly</span>
+                                            <button class="slider_content_btn" id="7">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item7">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-scarlet.png" alt="">
+                                            <span>Scarlet</span>
+                                            <button class="slider_content_btn" id="3">Learn more</button>
+                                        </div>
+                                    </div>
+                                    <div class="item" id="item8">
+                                        <div class="slider_content">
+                                            <img src="src/img/pets-freddie.png" alt="">
+                                            <span>Freddie</span>
+                                            <button class="slider_content_btn" id="6">Learn more</button>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
-
                         </div>
-                            <button class="button-right">Right</button>
+                        <button class="button-right" id="btn-right">Right</button>
                     </div>
                     <div>
                         <button class="pets_btn">Get to know the rest</button>
+                    </div>
+                    <div class="popup" id="popup">
+                        <div class="popup_content">
+                            <div class="popup_btn">
+                                <button class="close"></button>
+                            </div>
+                            <div class="pets_card">
+                                <img src="" alt="" id="img" width="500px">
+                                <div class="pets_card_content">
+                                    <span id="name"></span>
+                                    <span id="breed"></span>
+                                    <p id="description"></p>
+                                    <ul class="specifications">
+                                        <li><p>Age: <span id="age"></span></p></li>
+                                        <li><p>Inoculations: <span id="inoculations"></span></p></li>
+                                        <li><p>Diseases: <span id="diseases"></span></p></li>
+                                        <li><p>Parasites: <span id="parasites"></span></p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
