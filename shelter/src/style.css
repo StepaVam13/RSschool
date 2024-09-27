@@ -877,11 +877,12 @@ footer{
 
     .pets_card>img{
         width: 350px;
+        height: 350px;
     }
 
     .pets_card{
         width: 630px;
-        height: 350px;
+        height: auto;
         background: rgba(250, 250, 250, 1);
         border-radius: 9px;
         display: flex;
@@ -908,9 +909,7 @@ footer{
         gap: 5px;
     }
 
-    .specifications>li>p>span{
-        font-size: 13px;
-    }
+
 
     @media (max-width: 768px){
         body{
@@ -1100,6 +1099,34 @@ footer{
         @keyframes move-left {
             from {left: -270px}
             to{left: 0px}
+        }
+
+        .popup_content{
+            width: 302px;
+            height: 393px;
+        }
+
+        .pets_card>img{
+            width: 0px;
+        }
+
+        .pets_card{
+            width: 240px;
+            height: auto;
+        }
+
+        .pets_card_content{
+            margin: 10px 10px 10px 10px;
+            width: 220px;
+            gap: 7px;
+            align-items: center;
+        }
+
+
+        #description{
+        font-size: 13px;
+        line-height: 14.3px;
+        padding: 10px 0px 10px 0px;
         }
 
 

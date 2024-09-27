@@ -8,7 +8,5 @@ function openBurger() {
 
 }
 
-
-
 document.querySelector(".burger-menu").addEventListener("click", openBurger);
 document.querySelector("nav").addEventListener("click", openBurger);

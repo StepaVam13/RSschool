@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/style1.css">
+    <script src="src/lodash.js"></script>
+    <script src="src/popup.js" async></script>
+    <script src="src/pagination.js" async></script>
 </head>
 <body>
     <div class="wrapper">
@@ -44,70 +47,91 @@
            <section class="pets">
                 <div class="our_pets">
                     <p class="pets_content">Our friends who <br> are looking for a house</p>
-                    <div class="slider">
-                        <div class="Katrine">
+                    <div class="carousel" id="carousel">
+                        <div class="item" id="item1">
                             <div class="slider_content">
                                 <img src="src/img/pets-katrine.png" alt="">
                                 <span>Katrine</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="4">Learn more</button>
                             </div>
                         </div>
-                        <div class="Jennifer">
+                        <div class="item" id="item2">
                             <div class="slider_content">
                                 <img src="src/img/pets-jennifer.png" alt="">
                                 <span>Jennifer</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="0">Learn more</button>
                             </div>
                         </div>
-                        <div class="Woody">
+                        <div class="item" id="item3">
                             <div class="slider_content">
                                 <img src="src/img/pets-woody.png" alt="">
                                 <span>Woody</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="2">Learn more</button>
                             </div>
                         </div>
-                        <div class="Sophia">
+                        <div class="item" id="item4">
                             <div class="slider_content">
-                                <img src="src/img/pets-katrine (1).png" alt="">
+                                <img src="src/img/pets-sophia.png" alt="">
                                 <span>Sophia</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="1">Learn more</button>
                             </div>
                         </div>
-                        <div class="Timmy">
+                        <div class="item" id="item5">
                             <div class="slider_content">
                                 <img src="src/img/pets-timmy.png" alt="">
                                 <span>Timmy</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="5">Learn more</button>
                             </div>
                         </div>
-                        <div class="Charly">
+                        <div class="item" id="item6">
                             <div class="slider_content">
                                 <img src="src/img/pets-charly.png" alt="">
                                 <span>Charly</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="7">Learn more</button>
                             </div>
                         </div>
-                        <div class="Scarlet">
+                        <div class="item" id="item7">
                             <div class="slider_content">
                                 <img src="src/img/pets-scarlet.png" alt="">
                                 <span>Scarlet</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="3">Learn more</button>
                             </div>
                         </div>
-                        <div class="Freddie">
+                        <div class="item" id="item8">
                             <div class="slider_content">
-                                <img src="src/img/pets-katrine (2).png" alt="">
+                                <img src="src/img/pets-freddie.png" alt="">
                                 <span>Freddie</span>
-                                <button>Learn more</button>
+                                <button class="slider_content_btn" id="6">Learn more</button>
                             </div>
                         </div>
                     </div>
                     <div class="pagination">
-                            <button class="left-button"><<</button>
-                            <button class="left-button"><</button>
+                            <button class="inactive" id="start-button"><<</button>
+                            <button class="inactive"  id="left-button"><</button>
                             <span class="number">1</span>
-                            <button class="right-button">></button>
-                            <button class="right-button">>></button>
+                            <button class="active"  id="right-button">></button>
+                            <button class="active" id="end-button">>></button>
+                    </div>
+                    <div class="popup" id="popup">
+                        <div class="popup_content">
+                            <div class="popup_btn">
+                                <button class="close"></button>
+                            </div>
+                            <div class="pets_card">
+                                <img src="" alt="" id="img" width="500px">
+                                <div class="pets_card_content">
+                                    <span id="name"></span>
+                                    <span id="breed"></span>
+                                    <p id="description"></p>
+                                    <ul class="specifications">
+                                        <li><p>Age: <span id="age"></span></p></li>
+                                        <li><p>Inoculations: <span id="inoculations"></span></p></li>
+                                        <li><p>Diseases: <span id="diseases"></span></p></li>
+                                        <li><p>Parasites: <span id="parasites"></span></p></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

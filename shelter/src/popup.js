@@ -48,8 +48,6 @@ function importFile() {
 }
 
 
-
-
 carousel.addEventListener('click', (event) => {
   const isButton = event.target.nodeName === 'BUTTON';
   if (!isButton) {
