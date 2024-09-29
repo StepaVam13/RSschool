@@ -275,6 +275,7 @@ header, section.start-screen{
     background-repeat: no-repeat;
     background-position: center;
     font-size: 0;
+    background-color: transparent;
 }
 
 .button-left:hover{
@@ -297,6 +298,7 @@ header, section.start-screen{
     background-repeat: no-repeat;
     background-position: center;
     font-size: 0;
+    background-color: transparent;
 }
 
 .pets{
@@ -527,6 +529,7 @@ header, section.start-screen{
     background-position: center;
     padding: 0;
     margin: 0;
+    background-color: transparent;
 }
 
 .help_content{
