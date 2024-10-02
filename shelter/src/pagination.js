@@ -49,6 +49,7 @@ function sortedPets() {
 	result = [];
 	for (let i = 0; i < maxNumberPages; i++) {
 		let arr2 = new Array(numberPets).fill(8)
+		console.log(arr2);
 		let counter = 0;
 		while (counter < numberPets) {
 			let index = _.random(0, 7);
@@ -84,17 +85,17 @@ function replaceItem() {
 }
 
 function activeButton(item1, item2) {
-	item1.classList.remove("inactiveButton");
-	item1.classList.add("activeButton");
-	item2.classList.remove("inactiveButton");
-	item2.classList.add("activeButton");
+	item1.classList.remove("inactive");
+	item1.classList.add("active");
+	item2.classList.remove("inactive");
+	item2.classList.add("active");
 }
 
 function inactiveButton(item1, item2) {
-	item1.classList.remove("activeButton");
-	item1.classList.add("inactiveButton");
-	item2.classList.remove("activeButton");
-	item2.classList.add("inactiveButton");
+	item1.classList.remove("active");
+	item1.classList.add("inactive");
+	item2.classList.remove("active");
+	item2.classList.add("inactive");
 }
 
 

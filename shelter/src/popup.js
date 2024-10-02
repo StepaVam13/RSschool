@@ -21,7 +21,6 @@ function closeEsc() {
   document.onkeydown = function(evt) {
     if (evt.keyCode == 27 && document.querySelector('.open')) {
       POPUP.classList.toggle("open");
-      document.querySelector("body").classList.toggle("fix");
     }
   };
 }

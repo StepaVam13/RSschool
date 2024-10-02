@@ -26,42 +26,18 @@ header{
 
 }
 
-
+.burger-menu{
+	display: none;
+	background-image: url('img/Burger\ \(1\).svg');
+	width: 30px;
+	height: 22px;
+}
 nav>ul{
 	display: flex;
 	gap: 35px;
 	padding: 0;
 	list-style-type: none;
 }
-
-
-
-.burger-menu{
-	width: 30px;
-	height: 22px;
-	display: flex;
-	z-index: 51;
-	flex-direction: column;
-	justify-content: space-between;
-	display: none;
-}
-.burger-menu>span{
-	height: 2px;
-	width: 30px;
-	background-color: rgba(0, 0, 0, 1);
-	display:block;
-}
-
-.burger-menu.active {
-	flex-direction: row;
-	width: 24px;
-}
-
-.burger-menu.active>span {
-	width: 2px;
-	height: 30px;
-}
-
 
 .logo_a{
 	font-family: Arial;
@@ -212,7 +188,7 @@ h2{
 	justify-content: center;
 }
 
-.inactiveButton{
+.inactive{
 	width: 52px;
 	height: 52px;
 	border-radius: 100px;
@@ -245,7 +221,7 @@ h2{
 }
 
 
-.activeButton{
+.active{
 	width: 52px;
 	height: 52px;
 	border-radius: 100px;
@@ -260,7 +236,7 @@ h2{
 }
 
 
-.activeButton:hover{
+.active:hover{
 	background-color: #F1CDB3;
 	border: none;
 }
@@ -628,39 +604,7 @@ footer{
 	}
 	.burger-menu{
 		display: flex;
-		align-items: center;
 	}
-	.nav{
-			display: none;
-			align-items: center;
-			text-align: center;
-			justify-content: center;
-			position:fixed;
-			height: 100%;
-			width: 320px;
-			top: 0;
-			right: 0;
-			z-index: 50;
-			overflow-y: auto;
-			background: rgba(246, 246, 246, 1);
-	}
-
-	.nav>ul{
-			flex-direction: column;
-	}
-
-	.nav>ul>li{
-			font-size: 32px;
-			line-height: 51.2px;
-	}
-
-	.logo_a{
-		font-family: Arial;
-		font-size: 32px;
-		line-height: 51.2px;
-		text-decoration: none;
-}
-
 	.Sophia{
 		display: none;
 	}
