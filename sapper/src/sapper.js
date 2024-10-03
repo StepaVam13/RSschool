@@ -174,5 +174,4 @@ function startGame() {
 		}
 	}
 }
-
 startGame();
